@@ -21,7 +21,7 @@ def flower(url, subfolder_name, flower_name):
         div_elements_rose = soup.find_all('img', class_='serp-item__thumb justifier__thumb')
         for img in div_elements_rose:
             iterator += 1
-            file_extension = 'png'
+            file_extension = 'jpg'
             photo_name = flower_name + str(iterator)
             file_name = f"{photo_name}.{file_extension}"
             img_src = img.get('src')
@@ -40,4 +40,4 @@ def flower(url, subfolder_name, flower_name):
 
 
 flower('https://yandex.ru/images/search?text=rose', 'Rose', "Rose")
-#flower('https://yandex.ru/images/search?text=%D0%A2%D1%8E%D0%BB%D1%8C%D0%BF%D0%B0%D0%BD', 'Tulip', "Tulip")
+flower('https://yandex.ru/images/search?text=%D0%A2%D1%8E%D0%BB%D1%8C%D0%BF%D0%B0%D0%BD', 'Tulip', "Tulip")
